@@ -16,9 +16,17 @@ docs/client-kit/      the client's brief, image direction and reference boards
 tools/build_brand.py   regenerates logos, favicons, icons (and placeholders for missing photos)
 ```
 
-## Adding the photographs
+## Photographs and brand artwork
 
-The files in `assets/images/` are **placeholders**. Replace each with the real photo using the **same file name** (WebP, sizes in `assets/brand-guide.md`). No code changes needed.
+Photos come from the client pack and are cropped/exported by `tools/process_photos.py`.
+Logos, the navicon and the circular icons are the client’s artwork traced to SVG:
+
+```
+python3 tools/trace_brand.py    # PNG artwork in tools/brand-source → vector paths
+python3 tools/build_brand.py    # logos, favicons, icons, sprite in index.html, manifest
+```
+
+To swap a photo, replace the file in `assets/images/` with the same name (or update the crop table and re-run the script).
 
 ## Contact details
 

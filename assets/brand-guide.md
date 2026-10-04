@@ -12,27 +12,23 @@ Lia doesn’t teach a set of exercises — she looks at how each person moves an
 
 ## Logo
 
+All logo artwork is the client’s own (`LIA-Website-Assets` pack), traced to clean vector paths by `tools/trace_brand.py` — no live fonts, so it renders identically everywhere.
+
 | File | Use |
 |---|---|
-| `branding/lia-logo-horizontal.svg` | **Primary.** Headers, documents, email signatures |
-| `branding/lia-logo-dark.svg / .png` | Stacked, charcoal. Light backgrounds, print, signage |
-| `branding/lia-logo-light.svg / .png` | Stacked, off-white. Reversed on charcoal or photography |
-| `branding/lia-logo-horizontal-light.svg` | Horizontal, reversed |
-| `branding/lia-mark.svg / .png` | Standalone mark (line) |
-| `branding/lia-mark-light.svg` | Standalone mark, off-white |
-| `branding/lia-mark-tile.png` | Mark on charcoal tile — social avatars |
-| `favicon/*` | Favicon / navicon (filled, simplified mark) |
-
-**The mark** is the client-kit symbol (`docs/client-kit`): two leaves opening from a short stem — growth, movement and the body opening. One line weight, no fills, no ornament. In the stacked logo it sits directly above the “I” of LIA, its stem aligned to the letter.
-**The favicon** uses the same two leaves filled, on a charcoal tile, so it stays recognisable at 16 × 16 and 32 × 32 px (a thin outline mark disappears at that size).
-
-**Wordmark:** “LIA” in Cormorant Garamond Regular, tracked +220. Subtitle in Hanken Grotesk Regular, uppercase, tracked +340, separated by round dots.
-All logo text is converted to outlines, so the SVGs render identically everywhere.
+| `branding/lia-logo-horizontal.svg / .png` | **Primary.** Leaf sweeping over LIA, subtitle beneath. Documents, signage, social headers |
+| `branding/lia-logo-horizontal-light.svg` | Primary, reversed |
+| `branding/lia-logo-dark.svg / .png` | Stacked alternative (leaf-figure rising above LIA), charcoal |
+| `branding/lia-logo-light.svg / .png` | Stacked alternative, off-white — footer, dark or photographic backgrounds |
+| `branding/lia-wordmark.svg` / `-light.svg` | Leaf + LIA without subtitle — website header and small spaces |
+| `branding/lia-mark.svg / .png`, `lia-mark-light.svg` | Standalone navicon mark: the two calligraphic leaves |
+| `branding/lia-mark-tile.png` | Mark on a charcoal tile — social avatars |
+| `favicon/*` | Favicon / navicon: the mark in off-white on a charcoal tile, recognisable at 16 × 16 and 32 × 32 px |
 
 Do: give the logo clear space at least equal to the height of the “L”. Use charcoal on light, off-white on dark.
-Don’t: recolour in olive or taupe, stretch, add effects, place on busy parts of photos, or swap the mark for lotus/yoga/silhouette symbols.
+Don’t: recolour, stretch, add effects, separate the leaf from the wordmark in the primary logo, or place it on busy parts of photos.
 
-Minimum sizes: horizontal logo 140 px wide on screen; stacked 110 px; mark alone 20 px (below that use the favicon).
+Minimum sizes: primary 160 px wide on screen; wordmark 60 px wide; mark alone 20 px (below that use the favicon).
 
 ## Colour
 
@@ -52,9 +48,10 @@ Alternatives if licensing a paid face later: Canela or Editorial New (headlines)
 
 ## Icons
 
-The site uses the icon set in `icons/` (drawn for this build). The client kit’s starter icons are kept in the kit for reference; they mix weights and a few are generic (e.g. circle-cross for Pilates), so they weren’t used.
+The core icons are the client’s circular line family (`icons/lia-icon-set-reference.png`), traced to SVG and opened up slightly so the hairlines hold at 40–64 px:
+`personalised`, `mobility`, `control`, `connection`, `longevity`, `home-studio` — fill `currentColor`.
 
-`icons/*.svg` — 24 px grid, 1.25 px stroke, round caps and joins, `currentColor`. Quiet line drawings only; no fills, no emoji, no clip-art.
+Supporting icons (`pilates`, `neuromovement`, `experience`, `calendar`, `location`, `instagram`, `email`, `phone`, `arrow-right`) are 24 px line icons drawn to sit with that family; the discipline ones are enclosed in a circle to match.
 
 ## Photography direction
 
@@ -69,16 +66,17 @@ Non-negotiables:
 - Neuromovement = coordination, balance, proprioception (contralateral reach, balance pad, small ball). No brain graphics, no tech, no clinic.
 - Show a range of ages and body types, not only young athletic women.
 
-| File | Size | Content |
+| Site file | Source (client pack) | Notes |
 |---|---|---|
-| `images/hero.webp` | 1920 × 1280 | Lia, controlled reformer movement, home studio |
-| `images/pilates.webp` | 1200 × 1500 (4:5) | Reformer footwork / bridge / side-lying |
-| `images/mobility-90-90.webp` | 1200 × 1500 | Client in 90/90, Lia cueing |
-| `images/neuromovement-coordination.webp` | 1200 × 1500 | Contralateral coordination or balance task |
-| `images/lia-portrait.webp` | 1200 × 1500 | Portrait of Lia |
-| `images/studio-wide.webp` | 1920 × 1200 | Wide studio, daylight, reformer, plants |
-| `images/studio-detail.webp` | 1000 × 1250 | Mats, small balls, balance pad |
-| `images/private-session.webp` | 1920 × 1100 | Warm 1:1 session — background of final CTA (text sits on the left) |
+| `images/hero.webp` | pilates-reformer-movement | Lia, controlled bridge on the reformer |
+| `images/pilates.webp` | pilates-private-session | One-to-one reformer instruction |
+| `images/mobility-90-90.webp` | mobility-guided-session | Guided seated hip mobility |
+| `images/neuromovement-coordination.webp` | neuromovement-balance-session | Single-leg balance and reach |
+| `images/lia-portrait.webp` | lia-portrait-concept | Cropped to 4:5, trimmed on the right |
+| `images/studio-wide.webp` | studio-wide | Reformer side of the room (studio section) |
+| `images/private-session.webp` | studio-wide | Full room (final call to action) |
+
+Re-export with `python3 tools/process_photos.py <folder of source PNGs>`; crops are defined at the top of that script.
 
 Export as WebP, quality ~78. Hero/wide images 1600–2000 px wide, card images 800–1200 px.
 
