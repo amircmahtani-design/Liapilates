@@ -18,10 +18,8 @@ JOBS = {
     "neuromovement-coordination.webp": ("neuromovement-balance-session.png", (0, 0, 1, 1), 1448, "Single-leg balance and reach on a balance cushion"),
     # portrait: trimmed on the right to keep the frame on Lia, 4:5
     "lia-portrait.webp": ("lia-portrait-concept.png", (0, 0, 0.838, 0.838), 1200, "Lia, portrait"),
-    # studio section: the reformer side of the room
-    "studio-wide.webp": ("studio-wide.png", (0, 0.04, 0.66, 1), 1600, "Studio: reformer, arched window, daylight"),
-    # final call to action: the whole room
-    "private-session.webp": ("studio-wide.png", (0, 0, 1, 1), 1920, "The full home studio, warm daylight"),
+    # studio section: the whole room, shown wide
+    "studio-wide.webp": ("studio-wide.png", (0, 0, 1, 1), 1920, "The home studio: reformer, arched windows, daylight"),
 }
 
 

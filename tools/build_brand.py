@@ -127,8 +127,7 @@ PLACEHOLDERS = {
     "mobility-90-90.webp": (1448, 1086, "Mobility — guided hip work"),
     "neuromovement-coordination.webp": (1448, 1086, "Neuromovement — balance / coordination"),
     "lia-portrait.webp": (1200, 1500, "Portrait — Lia"),
-    "studio-wide.webp": (1600, 1300, "Studio — reformer, daylight"),
-    "private-session.webp": (1920, 1080, "Final CTA — the studio"),
+    "studio-wide.webp": (1920, 1080, "Studio \u2014 the whole room, daylight"),
 }
 
 

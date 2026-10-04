@@ -209,12 +209,7 @@
     {
       "path": "assets/images/studio-wide.webp",
       "type": "webp",
-      "note": "Studio — reformer, daylight"
-    },
-    {
-      "path": "assets/images/private-session.webp",
-      "type": "webp",
-      "note": "Final CTA — the studio"
+      "note": "Studio — the whole room, daylight"
     },
     {
       "path": "assets/textures/warm-plaster.webp",
@@ -242,12 +237,7 @@
       "note": "Self-hosted web font, Latin subset (OFL)"
     },
     {
-      "path": "assets/fonts/hanken-grotesk.woff2",
-      "type": "woff2",
-      "note": "Self-hosted web font, Latin subset (OFL)"
-    },
-    {
-      "path": "assets/fonts/mrs-saint-delafield.woff2",
+      "path": "assets/fonts/manrope.woff2",
       "type": "woff2",
       "note": "Self-hosted web font, Latin subset (OFL)"
     },

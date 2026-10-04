@@ -37,14 +37,23 @@ Lots of off-white and cream space, charcoal typography, olive used sparingly for
 
 ## Typography
 
-| Role | Typeface | Notes |
-|---|---|---|
-| Headlines | **Cormorant Garamond** Light/Regular (+ Italic) | Editorial, high contrast. Uppercase for big statements, sentence case + italic for second lines |
-| Body & navigation | **Hanken Grotesk** Regular/Medium | Clean neutral sans. Small labels uppercase, tracked +220 to +340 |
-| Annotations only | **Mrs Saint Delafield** | e.g. “Movement with purpose.” One per view at most, never for information |
+Two typefaces only.
 
-Web fonts are self-hosted in `/assets/fonts/` (Latin subset, WOFF2). All are SIL Open Font License.
-Alternatives if licensing a paid face later: Canela or Editorial New (headlines), Neue Haas Grotesk (body).
+| Role | Typeface | Use |
+|---|---|---|
+| Headings | **Cormorant Garamond** Medium (+ Italic) | Sentence case. Italic for a deliberate second line (“Your session.”) |
+| Body & UI | **Manrope** Regular / Medium / SemiBold | Body 16–17px, line-height 1.65. Labels 12px SemiBold, uppercase, +0.16em, used sparingly |
+
+Scale (fluid): H1 44→76px · H2 34→54px · H3 26→32px · lead 17→19px · body 16→17px.
+No script or handwritten type on the website. Web fonts are self-hosted in `/assets/fonts/` (Latin subset, WOFF2, SIL Open Font License).
+
+## Layout system
+
+- Container 1280px, gutters 20 / 28 / 40px (phone / tablet / desktop).
+- Spacing scale 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96 · 120px.
+- Section padding 56 / 80 / 112px.
+- Buttons: 48px high, 26px side padding, 3px radius. Primary olive, secondary 1px outline. Nothing else.
+- Separation with 1px hairlines, never shadows or cards.
 
 ## Icons
 
@@ -73,8 +82,7 @@ Non-negotiables:
 | `images/mobility-90-90.webp` | mobility-guided-session | Guided seated hip mobility |
 | `images/neuromovement-coordination.webp` | neuromovement-balance-session | Single-leg balance and reach |
 | `images/lia-portrait.webp` | lia-portrait-concept | Cropped to 4:5, trimmed on the right |
-| `images/studio-wide.webp` | studio-wide | Reformer side of the room (studio section) |
-| `images/private-session.webp` | studio-wide | Full room (final call to action) |
+| `images/studio-wide.webp` | studio-wide | The whole room, shown wide in the studio section |
 
 Re-export with `python3 tools/process_photos.py <folder of source PNGs>`; crops are defined at the top of that script.
 
