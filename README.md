@@ -5,16 +5,17 @@ Static website for Lia’s private home studio in Jumeirah Park, Dubai. No build
 ## Structure
 
 ```
-index.html          the whole site (inline CSS + JS)
-thank-you.html      form fallback page
-netlify.toml        headers / publish settings
-site.webmanifest
-assets/
-  branding/  favicon/  icons/  images/  textures/  fonts/
-  brand-guide.md  colour-palette.txt  asset-manifest.json
-docs/client-kit/      the client's brief, image direction and reference boards
-tools/build_brand.py   regenerates logos, favicons, icons (and placeholders for missing photos)
+index.html                 Home
+about/  method/  studio/  contact/
+pilates/  mobility/  neuromovement/
+404.html  thank-you.html
+assets/site.css            the one stylesheet (design tokens at the top)
+assets/site.js             menu, header, contact details, booking form
+assets/images/             photos as .webp with a .jpg twin
+tools/build_pages.py       generates every page from shared templates
 ```
+
+Pages are plain static HTML. To change copy or layout, edit `tools/build_pages.py`, run `python3 tools/build_pages.py`, and commit the output. When photos, CSS or JS change, bump `V` in that script so browsers fetch the new files.
 
 ## Photographs and brand artwork
 
@@ -30,7 +31,7 @@ To swap a photo, replace the file in `assets/images/` with the same name (or upd
 
 ## Contact details
 
-At the bottom of `index.html`, fill in the `CONTACT` object (WhatsApp, phone, email, Instagram). Each line appears on the site only once it has a value.
+At the top of `assets/site.js`, fill in the `CONTACT` object (WhatsApp, phone, email, Instagram). Each line appears on the site only once it has a value.
 
 ## Booking form
 

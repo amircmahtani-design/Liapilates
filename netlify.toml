@@ -3,10 +3,12 @@
   publish = "."
   command = ""
 
+# Only fonts are cached long-term. Everything else revalidates (Netlify default),
+# so replaced photos and styles show up immediately.
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/fonts/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/*"

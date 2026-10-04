@@ -33,6 +33,8 @@ def main(src_dir):
         if im.width > max_w:
             im = im.resize((max_w, round(im.height * max_w / im.width)), Image.LANCZOS)
         im.save(OUT / name, "WEBP", quality=80, method=6)
+        # JPEG twin for browsers and in-app viewers that don't render WebP
+        im.save(OUT / name.replace(".webp", ".jpg"), "JPEG", quality=82, optimize=True, progressive=True)
         print(f"{name}: {im.width}x{im.height} {(OUT / name).stat().st_size // 1024} KB  ({note})")
 
 
