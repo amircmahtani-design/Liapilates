@@ -1,0 +1,272 @@
+{
+  "brand": "LIA — Pilates • Mobility • Neuromovement",
+  "files": [
+    {
+      "path": "assets/branding/lia-logo-dark.svg",
+      "type": "svg",
+      "note": "Stacked logo, charcoal — primary on light backgrounds"
+    },
+    {
+      "path": "assets/branding/lia-logo-light.svg",
+      "type": "svg",
+      "note": "Stacked logo, off-white — reversed, for dark/photo backgrounds"
+    },
+    {
+      "path": "assets/branding/lia-logo-horizontal.svg",
+      "type": "svg",
+      "note": "Primary horizontal logo, charcoal"
+    },
+    {
+      "path": "assets/branding/lia-logo-horizontal-light.svg",
+      "type": "svg",
+      "note": "Horizontal logo, off-white"
+    },
+    {
+      "path": "assets/branding/lia-logo-dark.png",
+      "type": "png",
+      "note": "1200px wide, transparent"
+    },
+    {
+      "path": "assets/branding/lia-logo-light.png",
+      "type": "png",
+      "note": "1200px wide, transparent"
+    },
+    {
+      "path": "assets/branding/lia-mark.svg",
+      "type": "svg",
+      "note": "Standalone brand mark"
+    },
+    {
+      "path": "assets/branding/lia-mark-light.svg",
+      "type": "svg",
+      "note": "Standalone brand mark, off-white"
+    },
+    {
+      "path": "assets/branding/lia-mark.png",
+      "type": "png",
+      "note": "1024px, transparent"
+    },
+    {
+      "path": "assets/branding/lia-mark-tile.png",
+      "type": "png",
+      "note": "Mark on charcoal tile — social avatar"
+    },
+    {
+      "path": "assets/favicon/favicon.svg",
+      "type": "svg",
+      "note": "Browser favicon / navicon"
+    },
+    {
+      "path": "assets/favicon/favicon-16.png",
+      "type": "png",
+      "note": "16×16"
+    },
+    {
+      "path": "assets/favicon/favicon-32.png",
+      "type": "png",
+      "note": "32×32"
+    },
+    {
+      "path": "assets/favicon/favicon-180.png",
+      "type": "png",
+      "note": "180×180"
+    },
+    {
+      "path": "assets/favicon/favicon-192.png",
+      "type": "png",
+      "note": "192×192"
+    },
+    {
+      "path": "assets/favicon/favicon-512.png",
+      "type": "png",
+      "note": "512×512"
+    },
+    {
+      "path": "assets/favicon/apple-touch-icon.png",
+      "type": "png",
+      "note": "180×180"
+    },
+    {
+      "path": "favicon.ico",
+      "type": "ico",
+      "note": "16 + 32 legacy favicon at site root"
+    },
+    {
+      "path": "assets/icons/pilates.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/mobility.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/neuromovement.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/personalised.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/experience.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/home-studio.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/calendar.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/location.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/instagram.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/email.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/phone.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/control.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/connection.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/longevity.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/icons/arrow-right.svg",
+      "type": "svg",
+      "note": "24px line icon, 1.25 stroke, currentColor"
+    },
+    {
+      "path": "assets/images/hero.webp",
+      "type": "webp",
+      "note": "1920×1280 — Hero — Lia, controlled reformer work, home studio"
+    },
+    {
+      "path": "assets/images/pilates.webp",
+      "type": "webp",
+      "note": "1200×1500 — Pilates — reformer footwork / bridge"
+    },
+    {
+      "path": "assets/images/mobility-90-90.webp",
+      "type": "webp",
+      "note": "1200×1500 — Mobility — client in 90/90, Lia cueing"
+    },
+    {
+      "path": "assets/images/neuromovement-coordination.webp",
+      "type": "webp",
+      "note": "1200×1500 — Neuromovement — contralateral coordination"
+    },
+    {
+      "path": "assets/images/lia-portrait.webp",
+      "type": "webp",
+      "note": "1200×1500 — Portrait — Lia"
+    },
+    {
+      "path": "assets/images/studio-wide.webp",
+      "type": "webp",
+      "note": "1920×1200 — Studio — wide, daylight, reformer"
+    },
+    {
+      "path": "assets/images/studio-detail.webp",
+      "type": "webp",
+      "note": "1000×1250 — Studio — detail, mats, small equipment"
+    },
+    {
+      "path": "assets/images/private-session.webp",
+      "type": "webp",
+      "note": "1920×1100 — Private session — warm, final CTA"
+    },
+    {
+      "path": "assets/textures/warm-plaster.webp",
+      "type": "webp",
+      "note": "Procedural texture (replace with photographed texture if wanted)"
+    },
+    {
+      "path": "assets/textures/botanical-shadow.webp",
+      "type": "webp",
+      "note": "Procedural texture (replace with photographed texture if wanted)"
+    },
+    {
+      "path": "assets/textures/timber.webp",
+      "type": "webp",
+      "note": "Procedural texture (replace with photographed texture if wanted)"
+    },
+    {
+      "path": "assets/fonts/cormorant-garamond-italic.woff2",
+      "type": "woff2",
+      "note": "Self-hosted web font, Latin subset (OFL)"
+    },
+    {
+      "path": "assets/fonts/cormorant-garamond.woff2",
+      "type": "woff2",
+      "note": "Self-hosted web font, Latin subset (OFL)"
+    },
+    {
+      "path": "assets/fonts/hanken-grotesk.woff2",
+      "type": "woff2",
+      "note": "Self-hosted web font, Latin subset (OFL)"
+    },
+    {
+      "path": "assets/fonts/mrs-saint-delafield.woff2",
+      "type": "woff2",
+      "note": "Self-hosted web font, Latin subset (OFL)"
+    },
+    {
+      "path": "assets/brand-guide.md",
+      "type": "md",
+      "note": ""
+    },
+    {
+      "path": "assets/colour-palette.txt",
+      "type": "txt",
+      "note": ""
+    }
+  ],
+  "colours": {
+    "charcoal": "#1F2A23",
+    "olive": "#3E4A3F",
+    "taupe": "#A89F8F",
+    "cream": "#DCCFC1",
+    "offwhite": "#F8F6F2"
+  },
+  "placeholders": [
+    "assets/images/hero.webp",
+    "assets/images/pilates.webp",
+    "assets/images/mobility-90-90.webp",
+    "assets/images/neuromovement-coordination.webp",
+    "assets/images/lia-portrait.webp",
+    "assets/images/studio-wide.webp",
+    "assets/images/studio-detail.webp",
+    "assets/images/private-session.webp"
+  ]
+}

@@ -1,0 +1,14 @@
+LIA — COLOUR PALETTE
+
+Deep charcoal / green   #1F2A23   rgb(31, 42, 35)     Primary text, dark sections, logo
+Muted olive             #3E4A3F   rgb(62, 74, 63)     Accent: primary buttons, links, icons
+Warm taupe              #A89F8F   rgb(168, 159, 143)  Numerals, small details, dividers
+Warm cream              #DCCFC1   rgb(220, 207, 193)  Image backgrounds, highlights on dark
+Off-white               #F8F6F2   rgb(248, 246, 242)  Page background, reversed logo
+
+Supporting tints used on the site
+Paper                   #F3EFE8   Alternate section background
+Muted text              #5B6158   Body copy on light backgrounds (AA contrast on #F8F6F2)
+Hairline                rgba(31, 42, 35, .14)
+
+Proportion guide: ~70% off-white/paper, ~15% cream & taupe, ~12% charcoal, ~3% olive accent.
