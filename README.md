@@ -12,6 +12,7 @@ site.webmanifest
 assets/
   branding/  favicon/  icons/  images/  textures/  fonts/
   brand-guide.md  colour-palette.txt  asset-manifest.json
+docs/client-kit/      the client's brief, image direction and reference boards
 tools/build_brand.py   regenerates logos, favicons, icons (and placeholders for missing photos)
 ```
 

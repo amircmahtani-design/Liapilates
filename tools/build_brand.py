@@ -29,11 +29,11 @@ OFFWHITE = "#F8F6F2"
 # ---------------------------------------------------------------- the mark
 # Two leaves opening from a single stem: growth, movement, the body opening.
 # Drawn on a 64x64 grid with a single line weight.
+# Geometry from the client's LIA kit (branding/lia-mark.svg), re-centred on the grid.
 MARK_PATHS = [
-    "M30 60C30.6 51 31 42 29.6 33",                                   # stem
-    "M29.6 33C26 22 31.5 11 44 5.5C47.5 18 41.5 29 29.6 33Z",          # tall leaf
-    "M30.6 31.2C34.5 23.5 38 16.5 41.5 10.5",                          # its vein
-    "M30.2 41C24 42 16 37 13.5 26.5C22 25.5 28.4 31 30.2 41Z",         # low leaf
+    "M23 41C11 30 11 15 25 9c9 13 7 24-2 32Z",     # upright leaf
+    "M23 41C34 28 39 16 53 16c0 14-10 24-30 25Z",  # opening leaf
+    "M23 41v14",                                   # stem
 ]
 
 
@@ -46,21 +46,18 @@ def mark_group(color, width=1.5, tx=0, ty=0, scale=1.0):
 
 
 # Bolder, filled version for tiny sizes (favicon). Fewer details, same silhouette.
-FAV_LEAVES = [
-    "M31 36C26.5 23 32.5 10.5 47 4.5C51 19 44 31.5 31 36Z",
-    "M31.5 43.5C23.5 45 13.5 39 10.5 26C21 24.5 29.5 31.5 31.5 43.5Z",
-]
-FAV_STEM = "M31.4 60C32 51 32.2 43 31 36"
+FAV_LEAVES = MARK_PATHS[:2]
+FAV_STEM = "M23 40.5v15"
 
 
 def favicon_svg(size_hint="large"):
-    sw = 4.6 if size_hint == "large" else 6.5
-    sc = 0.78 if size_hint == "large" else 0.9
-    leaves = "".join(f'<path d="{d}" fill="{OFFWHITE}"/>' for d in FAV_LEAVES)
+    sw = 4.2 if size_hint == "large" else 5.5
+    sc = 0.86 if size_hint == "large" else 1.0
+    leaves = "".join(f'<path d="{d}" fill="{OFFWHITE}" stroke="{OFFWHITE}" stroke-width="1.2" stroke-linejoin="round"/>' for d in FAV_LEAVES)
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
         f'<rect width="64" height="64" rx="14" fill="{CHARCOAL}"/>'
-        f'<g transform="translate(32 33) scale({sc}) translate(-31 -32)">'
+        f'<g transform="translate(32 32) scale({sc}) translate(-32 -32)">'
         f'{leaves}<path d="{FAV_STEM}" fill="none" stroke="{OFFWHITE}" stroke-width="{sw}" stroke-linecap="round"/>'
         "</g></svg>"
     )
@@ -88,6 +85,7 @@ def text_path(text, font, size, tracking_em=0.0):
     x = 0.0
     pen = SVGPathPen(gs)
     extra = []
+    centres = []
     for i, ch in enumerate(text):
         if ch == "\u2022":  # draw a true round dot; the font's bullet is square
             r = size * 0.11
@@ -99,11 +97,13 @@ def text_path(text, font, size, tracking_em=0.0):
         gname = cmap.get(ord(ch))
         if gname is None:
             continue
+        centres.append(x + hmtx[gname][0] * s / 2)
         tp = TransformPen(pen, (s, 0, 0, -s, x, 0))
         gs[gname].draw(tp)
         x += hmtx[gname][0] * s
         if i < len(text) - 1:
             x += tracking_em * size
+    text_path.centres = centres
     return pen.getCommands() + "".join(extra), x
 
 
@@ -120,9 +120,10 @@ def wordmark_parts(color, lia_size=120, sub_size=13):
     serif = load_font("cormorant", 400)
     sans = load_font("hanken", 400)
     lia_d, lia_w = text_path("LIA", serif, lia_size, tracking_em=0.22)
+    i_centre = text_path.centres[1]
     sub_d, sub_w = text_path(SUBTITLE, sans, sub_size, tracking_em=0.34)
     return dict(
-        lia_d=lia_d, lia_w=lia_w, lia_cap=cap_height(serif, lia_size),
+        lia_d=lia_d, lia_w=lia_w, i_centre=i_centre, lia_cap=cap_height(serif, lia_size),
         sub_d=sub_d, sub_w=sub_w, sub_cap=cap_height(sans, sub_size), color=color,
     )
 
@@ -130,11 +131,13 @@ def wordmark_parts(color, lia_size=120, sub_size=13):
 def stacked_logo(color, with_rule=True):
     p = wordmark_parts(color)
     W = max(p["lia_w"], p["sub_w"]) + 40
-    mark_s = 1.35
-    mark_h = 64 * mark_s
-    y = 10
-    mark = mark_group(color, width=1.25, tx=W / 2 - 32 * mark_s, ty=y, scale=mark_s)
-    y += mark_h + 18
+    mark_s = 1.05
+    lia_x = (W - p["lia_w"]) / 2
+    ix = lia_x + p["i_centre"]
+    y = 6
+    # stem (x=23 on the mark grid) lines up with the centre of the I; stem foot (y=55) stops just above it
+    mark = mark_group(color, width=1.6, tx=ix - 23 * mark_s, ty=y, scale=mark_s)
+    y += 55 * mark_s + 10
     lia_base = y + p["lia_cap"]
     sub_base = lia_base + 34 + p["sub_cap"]
     body = (

@@ -23,8 +23,8 @@ Lia doesn’t teach a set of exercises — she looks at how each person moves an
 | `branding/lia-mark-tile.png` | Mark on charcoal tile — social avatars |
 | `favicon/*` | Favicon / navicon (filled, simplified mark) |
 
-**The mark** is a single stem opening into two leaves — growth, movement and the body opening. One line weight, no fills, no ornament.
-**The favicon** uses a filled, simplified version of the same two leaves on a charcoal tile so it stays recognisable at 16 × 16 and 32 × 32 px.
+**The mark** is the client-kit symbol (`docs/client-kit`): two leaves opening from a short stem — growth, movement and the body opening. One line weight, no fills, no ornament. In the stacked logo it sits directly above the “I” of LIA, its stem aligned to the letter.
+**The favicon** uses the same two leaves filled, on a charcoal tile, so it stays recognisable at 16 × 16 and 32 × 32 px (a thin outline mark disappears at that size).
 
 **Wordmark:** “LIA” in Cormorant Garamond Regular, tracked +220. Subtitle in Hanken Grotesk Regular, uppercase, tracked +340, separated by round dots.
 All logo text is converted to outlines, so the SVGs render identically everywhere.
@@ -52,9 +52,13 @@ Alternatives if licensing a paid face later: Canela or Editorial New (headlines)
 
 ## Icons
 
+The site uses the icon set in `icons/` (drawn for this build). The client kit’s starter icons are kept in the kit for reference; they mix weights and a few are generic (e.g. circle-cross for Pilates), so they weren’t used.
+
 `icons/*.svg` — 24 px grid, 1.25 px stroke, round caps and joins, `currentColor`. Quiet line drawings only; no fills, no emoji, no clip-art.
 
 ## Photography direction
+
+Full brief: `docs/client-kit/IMAGE-DIRECTION.md`. The mobility pose in the reference board is **not** approved.
 
 All images share one treatment: natural Dubai daylight, warm neutral residential interiors, subtle greenery, realistic Pilates equipment, soft shadows, natural skin. Editorial, not staged; no glossy gym look.
 
