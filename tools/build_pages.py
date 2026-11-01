@@ -24,7 +24,7 @@ NAV = [
 
 # Bump when images, CSS or JS change: browsers cache by URL, and an earlier
 # build shipped placeholder images under the same file names.
-V = "3"
+V = "4"
 
 ARROW = '<svg aria-hidden="true"><use href="#i-arrow"/></svg>'
 
@@ -139,6 +139,7 @@ def page(path, title, description, body, preload=None):
     </div>
     <div class="footer__bottom">
       <p>© <span id="year">2026</span> LIA</p>
+      <p class="built-by">Website made by Zenith Advisory LLC</p>
       <p>Movement teaching, not medical treatment. Please check with your doctor about any medical condition.</p>
     </div>
   </div>

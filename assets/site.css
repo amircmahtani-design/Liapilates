@@ -349,6 +349,8 @@ em{font-style:italic}
 @media (hover:hover) and (pointer:fine){.footer__nav a:hover{text-decoration:underline;text-underline-offset:4px}}
 .footer__info strong{display:block;color:var(--paper);font-weight:500}
 .footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);padding-top:var(--space-5);font-size:13px;color:rgba(248,246,242,.6)}
+/* the credit, a line of its own under the copyright */
+.footer__bottom .built-by{flex-basis:100%;margin:0}
 @media (min-width:900px){.footer__top{grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr)}}
 
 @media (prefers-reduced-motion:reduce){
